@@ -48,7 +48,7 @@ namespace Spotics
             {
                 string artist = track.Split('-')[0];
                 string music = track.Split('-')[1];
-                string key = "cab7f89e9956e02660d0b053e171ae61";
+                string key = ""; // Sua key da API do Vagalume
                 var json = new WebClient().DownloadString(
                     "https://api.vagalume.com.br/search.php"
                     + "?art=" + artist
