@@ -26,7 +26,7 @@ namespace Spotics
         {
             try
             {
-                await RefreshAndUpdate().ConfigureAwait(true);
+                RefreshAndUpdate();
             }
             catch
             {
@@ -37,7 +37,7 @@ namespace Spotics
             }
         }
 
-        private async Task RefreshAndUpdate()
+        private void RefreshAndUpdate()
         {
             labelTocando.Text = GetSpotifyTrackInfo();
 
@@ -50,7 +50,7 @@ namespace Spotics
 
         private async void ButtonTocando_Click(object sender, EventArgs e)
         {
-            await RefreshAndUpdate().ConfigureAwait(true);
+            RefreshAndUpdate();
         }
 
         private static string GetSpotifyTrackInfo()
