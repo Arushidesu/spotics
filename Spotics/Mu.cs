@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Spotics
+﻿namespace Spotics
 {
-    class Mu
+    internal class Mu
     {
         public string id { get; set; }
         public string name { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace Spotics
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.labelAtualmente = new System.Windows.Forms.Label();
             this.labelTocando = new System.Windows.Forms.Label();
             this.buttonTocando = new System.Windows.Forms.Button();
