@@ -28,12 +28,11 @@ namespace Spotics
             {
                 await RefreshAndUpdate().ConfigureAwait(true);
             }
-            catch (Exception err)
+            catch
             {
                 _tmr.Stop();
                 _tmr.Enabled = false;
                 chkAutoUpdate.Checked = false;
-                MessageBox.Show(err.Message);
             }
         }
 
