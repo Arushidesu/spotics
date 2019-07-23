@@ -3,6 +3,8 @@
 
 Mostra a letra da música do seu Spotify :)
 
+#Black
 ![blackTheme](https://raw.githubusercontent.com/Arushidesu/spotics/master/print-black.PNG)
 
+#White
 ![WhiteTheme](https://raw.githubusercontent.com/Arushidesu/spotics/master/print-white.PNG)
