@@ -93,6 +93,11 @@ namespace Spotics
                 var json = e.Result;
                 SongDetails result = JsonConvert.DeserializeObject<SongDetails>(json);
                 textBoxLetra.Text = result.type.Contains("notfound") ? "Ocorreu algum erro! Música não reconhecida." : result.mus[0].text.Replace("\n", Environment.NewLine);
+
+                if (result.mus.Any() && result.mus[0].translate.Any())
+                    textBoxTraducao.Text = result.mus[0].translate[0].text.Replace("\n", Environment.NewLine);
+                else
+                    textBoxTraducao.Text = "Ocorreu algum erro! Tradução não encontrada.";
             }
             catch
             {
