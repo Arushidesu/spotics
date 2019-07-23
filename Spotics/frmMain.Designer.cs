@@ -44,28 +44,25 @@
             // 
             this.labelAtualmente.AutoSize = true;
             this.labelAtualmente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAtualmente.Location = new System.Drawing.Point(30, 38);
-            this.labelAtualmente.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelAtualmente.Location = new System.Drawing.Point(15, 20);
             this.labelAtualmente.Name = "labelAtualmente";
-            this.labelAtualmente.Size = new System.Drawing.Size(292, 36);
+            this.labelAtualmente.Size = new System.Drawing.Size(147, 18);
             this.labelAtualmente.TabIndex = 0;
             this.labelAtualmente.Text = "Tocando atualmente:";
             // 
             // labelTocando
             // 
-            this.labelTocando.Location = new System.Drawing.Point(336, 46);
-            this.labelTocando.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelTocando.Location = new System.Drawing.Point(168, 24);
             this.labelTocando.Name = "labelTocando";
-            this.labelTocando.Size = new System.Drawing.Size(506, 25);
+            this.labelTocando.Size = new System.Drawing.Size(253, 13);
             this.labelTocando.TabIndex = 1;
             // 
             // buttonTocando
             // 
             this.buttonTocando.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTocando.Location = new System.Drawing.Point(32, 96);
-            this.buttonTocando.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonTocando.Location = new System.Drawing.Point(16, 50);
             this.buttonTocando.Name = "buttonTocando";
-            this.buttonTocando.Size = new System.Drawing.Size(250, 44);
+            this.buttonTocando.Size = new System.Drawing.Size(125, 23);
             this.buttonTocando.TabIndex = 2;
             this.buttonTocando.Text = "Atualizar / Carregar";
             this.buttonTocando.UseVisualStyleBackColor = true;
@@ -74,22 +71,20 @@
             // textBoxLetra
             // 
             this.textBoxLetra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLetra.Location = new System.Drawing.Point(32, 171);
-            this.textBoxLetra.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxLetra.Location = new System.Drawing.Point(16, 89);
             this.textBoxLetra.Multiline = true;
             this.textBoxLetra.Name = "textBoxLetra";
             this.textBoxLetra.ReadOnly = true;
             this.textBoxLetra.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxLetra.Size = new System.Drawing.Size(1153, 995);
+            this.textBoxLetra.Size = new System.Drawing.Size(578, 519);
             this.textBoxLetra.TabIndex = 3;
             // 
             // buttonMais
             // 
             this.buttonMais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMais.Location = new System.Drawing.Point(1051, 95);
-            this.buttonMais.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonMais.Location = new System.Drawing.Point(526, 49);
             this.buttonMais.Name = "buttonMais";
-            this.buttonMais.Size = new System.Drawing.Size(62, 44);
+            this.buttonMais.Size = new System.Drawing.Size(31, 23);
             this.buttonMais.TabIndex = 5;
             this.buttonMais.Text = "+";
             this.buttonMais.UseVisualStyleBackColor = true;
@@ -98,10 +93,9 @@
             // buttonMenos
             // 
             this.buttonMenos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMenos.Location = new System.Drawing.Point(1125, 96);
-            this.buttonMenos.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonMenos.Location = new System.Drawing.Point(562, 50);
             this.buttonMenos.Name = "buttonMenos";
-            this.buttonMenos.Size = new System.Drawing.Size(60, 44);
+            this.buttonMenos.Size = new System.Drawing.Size(30, 23);
             this.buttonMenos.TabIndex = 6;
             this.buttonMenos.Text = "-";
             this.buttonMenos.UseVisualStyleBackColor = true;
@@ -110,20 +104,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(464, 1172);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(232, 609);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 25);
+            this.label1.Size = new System.Drawing.Size(151, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Desenvolvido por Alcides Dias";
             // 
             // chkAutoUpdate
             // 
             this.chkAutoUpdate.AutoSize = true;
-            this.chkAutoUpdate.Location = new System.Drawing.Point(302, 104);
-            this.chkAutoUpdate.Margin = new System.Windows.Forms.Padding(6);
+            this.chkAutoUpdate.Location = new System.Drawing.Point(151, 54);
             this.chkAutoUpdate.Name = "chkAutoUpdate";
-            this.chkAutoUpdate.Size = new System.Drawing.Size(298, 29);
+            this.chkAutoUpdate.Size = new System.Drawing.Size(150, 17);
             this.chkAutoUpdate.TabIndex = 8;
             this.chkAutoUpdate.Text = "Atualizar automaticamente";
             this.chkAutoUpdate.UseVisualStyleBackColor = true;
@@ -132,9 +124,10 @@
             // btnChangeTheme
             // 
             this.btnChangeTheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangeTheme.Location = new System.Drawing.Point(1022, 12);
+            this.btnChangeTheme.Location = new System.Drawing.Point(511, 6);
+            this.btnChangeTheme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangeTheme.Name = "btnChangeTheme";
-            this.btnChangeTheme.Size = new System.Drawing.Size(166, 39);
+            this.btnChangeTheme.Size = new System.Drawing.Size(83, 31);
             this.btnChangeTheme.TabIndex = 9;
             this.btnChangeTheme.Text = "Dark mode";
             this.btnChangeTheme.UseVisualStyleBackColor = true;
@@ -142,9 +135,9 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 1218);
+            this.ClientSize = new System.Drawing.Size(602, 634);
             this.Controls.Add(this.btnChangeTheme);
             this.Controls.Add(this.chkAutoUpdate);
             this.Controls.Add(this.label1);
@@ -156,7 +149,6 @@
             this.Controls.Add(this.labelAtualmente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain";
