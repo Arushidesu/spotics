@@ -30,6 +30,7 @@ namespace Spotics
             }
             catch
             {
+                textBoxLetra.Text = string.Empty;
                 _tmr.Stop();
                 _tmr.Enabled = false;
                 chkAutoUpdate.Checked = false;
@@ -43,7 +44,7 @@ namespace Spotics
             if (labelTocando.Text != _currentSong)
             {
                 _currentSong = labelTocando.Text;
-                await DownloadDetails().ConfigureAwait(true);
+                DownloadDetails();
             }
         }
 
@@ -69,7 +70,7 @@ namespace Spotics
             return proc.MainWindowTitle;
         }
 
-        private async Task DownloadDetails()
+        private void DownloadDetails()
         {
             string track = labelTocando.Text;
             string artist = track.Split('-')[0];
@@ -86,9 +87,16 @@ namespace Spotics
 
         private void wc_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
-            var json = e.Result;
-            SongDetails result = JsonConvert.DeserializeObject<SongDetails>(json);
-            textBoxLetra.Text = result.type == "song_notfound" ? "Ocorreu algum erro! Música não reconhecida." : result.mus[0].text.Replace("\n", Environment.NewLine);
+            try
+            {
+                var json = e.Result;
+                SongDetails result = JsonConvert.DeserializeObject<SongDetails>(json);
+                textBoxLetra.Text = result.type.Contains("notfound") ? "Ocorreu algum erro! Música não reconhecida." : result.mus[0].text.Replace("\n", Environment.NewLine);
+            }
+            catch
+            {
+                textBoxLetra.Text = "Ocorreu algum erro! Música não reconhecida.";
+            }
         }
 
         private void ButtonMais_Click(object sender, EventArgs e)
