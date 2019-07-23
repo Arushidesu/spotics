@@ -39,12 +39,13 @@
             this.chkAutoUpdate = new System.Windows.Forms.CheckBox();
             this.btnChangeTheme = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageLetra = new System.Windows.Forms.TabPage();
+            this.tabPageTraducao = new System.Windows.Forms.TabPage();
             this.textBoxTraducao = new System.Windows.Forms.TextBox();
+            this.linkLabelVagalume = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageLetra.SuspendLayout();
+            this.tabPageTraducao.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAtualmente
@@ -112,7 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(232, 609);
+            this.label1.Location = new System.Drawing.Point(437, 612);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 13);
             this.label1.TabIndex = 7;
@@ -143,34 +144,34 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageLetra);
+            this.tabControl1.Controls.Add(this.tabPageTraducao);
             this.tabControl1.Location = new System.Drawing.Point(12, 79);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(580, 523);
             this.tabControl1.TabIndex = 10;
             // 
-            // tabPage2
+            // tabPageLetra
             // 
-            this.tabPage2.Controls.Add(this.textBoxLetra);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(572, 497);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tradução";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageLetra.Controls.Add(this.textBoxLetra);
+            this.tabPageLetra.Location = new System.Drawing.Point(4, 22);
+            this.tabPageLetra.Name = "tabPageLetra";
+            this.tabPageLetra.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageLetra.Size = new System.Drawing.Size(572, 497);
+            this.tabPageLetra.TabIndex = 1;
+            this.tabPageLetra.Text = "Letra";
+            this.tabPageLetra.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // tabPageTraducao
             // 
-            this.tabPage1.Controls.Add(this.textBoxTraducao);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(572, 497);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Letra";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageTraducao.Controls.Add(this.textBoxTraducao);
+            this.tabPageTraducao.Location = new System.Drawing.Point(4, 22);
+            this.tabPageTraducao.Name = "tabPageTraducao";
+            this.tabPageTraducao.Size = new System.Drawing.Size(572, 497);
+            this.tabPageTraducao.TabIndex = 2;
+            this.tabPageTraducao.Text = "Tradução";
+            this.tabPageTraducao.UseVisualStyleBackColor = true;
             // 
             // textBoxTraducao
             // 
@@ -184,11 +185,23 @@
             this.textBoxTraducao.Size = new System.Drawing.Size(572, 497);
             this.textBoxTraducao.TabIndex = 4;
             // 
+            // linkLabelVagalume
+            // 
+            this.linkLabelVagalume.AutoSize = true;
+            this.linkLabelVagalume.Location = new System.Drawing.Point(13, 605);
+            this.linkLabelVagalume.Name = "linkLabelVagalume";
+            this.linkLabelVagalume.Size = new System.Drawing.Size(96, 13);
+            this.linkLabelVagalume.TabIndex = 11;
+            this.linkLabelVagalume.TabStop = true;
+            this.linkLabelVagalume.Text = "linkLabelVagalume";
+            this.linkLabelVagalume.Visible = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 634);
+            this.Controls.Add(this.linkLabelVagalume);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnChangeTheme);
             this.Controls.Add(this.chkAutoUpdate);
@@ -206,10 +219,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spotics";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPageLetra.ResumeLayout(false);
+            this.tabPageLetra.PerformLayout();
+            this.tabPageTraducao.ResumeLayout(false);
+            this.tabPageTraducao.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,9 +240,10 @@
         private System.Windows.Forms.CheckBox chkAutoUpdate;
         private System.Windows.Forms.Button btnChangeTheme;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageLetra;
+        private System.Windows.Forms.TabPage tabPageTraducao;
         private System.Windows.Forms.TextBox textBoxTraducao;
+        private System.Windows.Forms.LinkLabel linkLabelVagalume;
     }
 }
 
