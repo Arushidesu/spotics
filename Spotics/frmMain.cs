@@ -43,7 +43,7 @@ namespace Spotics
             {
                 await DownloadDetails().ConfigureAwait(true);
             }
-            catch (Exception err)
+            catch
             {
                 textBoxLetra.Text = "Ocorreu algum erro! Música não reconhecida.";
             }
