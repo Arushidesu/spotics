@@ -80,13 +80,13 @@
             this.textBoxLetra.Name = "textBoxLetra";
             this.textBoxLetra.ReadOnly = true;
             this.textBoxLetra.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxLetra.Size = new System.Drawing.Size(806, 625);
+            this.textBoxLetra.Size = new System.Drawing.Size(1153, 995);
             this.textBoxLetra.TabIndex = 3;
             // 
             // buttonMais
             // 
             this.buttonMais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMais.Location = new System.Drawing.Point(708, 94);
+            this.buttonMais.Location = new System.Drawing.Point(1051, 95);
             this.buttonMais.Margin = new System.Windows.Forms.Padding(6);
             this.buttonMais.Name = "buttonMais";
             this.buttonMais.Size = new System.Drawing.Size(62, 44);
@@ -98,7 +98,7 @@
             // buttonMenos
             // 
             this.buttonMenos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMenos.Location = new System.Drawing.Point(782, 94);
+            this.buttonMenos.Location = new System.Drawing.Point(1125, 96);
             this.buttonMenos.Margin = new System.Windows.Forms.Padding(6);
             this.buttonMenos.Name = "buttonMenos";
             this.buttonMenos.Size = new System.Drawing.Size(60, 44);
@@ -110,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(296, 840);
+            this.label1.Location = new System.Drawing.Point(464, 1172);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(304, 25);
@@ -132,7 +132,7 @@
             // btnChangeTheme
             // 
             this.btnChangeTheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangeTheme.Location = new System.Drawing.Point(708, 12);
+            this.btnChangeTheme.Location = new System.Drawing.Point(1022, 12);
             this.btnChangeTheme.Name = "btnChangeTheme";
             this.btnChangeTheme.Size = new System.Drawing.Size(166, 39);
             this.btnChangeTheme.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 904);
+            this.ClientSize = new System.Drawing.Size(1200, 1218);
             this.Controls.Add(this.btnChangeTheme);
             this.Controls.Add(this.chkAutoUpdate);
             this.Controls.Add(this.label1);
