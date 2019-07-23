@@ -33,10 +33,10 @@
             this.labelTocando = new System.Windows.Forms.Label();
             this.buttonTocando = new System.Windows.Forms.Button();
             this.textBoxLetra = new System.Windows.Forms.TextBox();
-            this.buttonCarregar = new System.Windows.Forms.Button();
             this.buttonMais = new System.Windows.Forms.Button();
             this.buttonMenos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkAutoUpdate = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // labelAtualmente
@@ -60,9 +60,9 @@
             // 
             this.buttonTocando.Location = new System.Drawing.Point(16, 50);
             this.buttonTocando.Name = "buttonTocando";
-            this.buttonTocando.Size = new System.Drawing.Size(65, 23);
+            this.buttonTocando.Size = new System.Drawing.Size(125, 23);
             this.buttonTocando.TabIndex = 2;
-            this.buttonTocando.Text = "Atualizar";
+            this.buttonTocando.Text = "Atualizar / Carregar";
             this.buttonTocando.UseVisualStyleBackColor = true;
             this.buttonTocando.Click += new System.EventHandler(this.ButtonTocando_Click);
             // 
@@ -76,16 +76,6 @@
             this.textBoxLetra.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBoxLetra.Size = new System.Drawing.Size(405, 327);
             this.textBoxLetra.TabIndex = 3;
-            // 
-            // buttonCarregar
-            // 
-            this.buttonCarregar.Location = new System.Drawing.Point(87, 50);
-            this.buttonCarregar.Name = "buttonCarregar";
-            this.buttonCarregar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCarregar.TabIndex = 4;
-            this.buttonCarregar.Text = "Carregar";
-            this.buttonCarregar.UseVisualStyleBackColor = true;
-            this.buttonCarregar.Click += new System.EventHandler(this.ButtonCarregar_Click);
             // 
             // buttonMais
             // 
@@ -116,15 +106,26 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Desenvolvido por Alcides Dias";
             // 
-            // Form1
+            // chkAutoUpdate
+            // 
+            this.chkAutoUpdate.AutoSize = true;
+            this.chkAutoUpdate.Location = new System.Drawing.Point(151, 54);
+            this.chkAutoUpdate.Name = "chkAutoUpdate";
+            this.chkAutoUpdate.Size = new System.Drawing.Size(150, 17);
+            this.chkAutoUpdate.TabIndex = 8;
+            this.chkAutoUpdate.Text = "Atualizar automaticamente";
+            this.chkAutoUpdate.UseVisualStyleBackColor = true;
+            this.chkAutoUpdate.CheckedChanged += new System.EventHandler(this.ChkAutoUpdate_CheckedChanged);
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 470);
+            this.Controls.Add(this.chkAutoUpdate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonMenos);
             this.Controls.Add(this.buttonMais);
-            this.Controls.Add(this.buttonCarregar);
             this.Controls.Add(this.textBoxLetra);
             this.Controls.Add(this.buttonTocando);
             this.Controls.Add(this.labelTocando);
@@ -133,7 +134,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spotics";
             this.ResumeLayout(false);
@@ -147,10 +148,10 @@
         private System.Windows.Forms.Label labelTocando;
         private System.Windows.Forms.Button buttonTocando;
         private System.Windows.Forms.TextBox textBoxLetra;
-        private System.Windows.Forms.Button buttonCarregar;
         private System.Windows.Forms.Button buttonMais;
         private System.Windows.Forms.Button buttonMenos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chkAutoUpdate;
     }
 }
 
