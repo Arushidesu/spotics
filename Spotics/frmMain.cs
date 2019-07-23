@@ -22,7 +22,7 @@ namespace Spotics
             _tmr.Tick += AutoRefresh;
         }
 
-        private async void AutoRefresh(object sender, EventArgs e)
+        private void AutoRefresh(object sender, EventArgs e)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace Spotics
             }
         }
 
-        private async void ButtonTocando_Click(object sender, EventArgs e)
+        private void ButtonTocando_Click(object sender, EventArgs e)
         {
             RefreshAndUpdate();
         }
