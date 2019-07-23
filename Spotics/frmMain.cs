@@ -47,11 +47,7 @@ namespace Spotics
 
                 using (var wc = new WebClient())
                 {
-                    var json = wc.DownloadString(
-                        "https://api.vagalume.com.br/search.php"
-                        + "?art=" + artist
-                        + "&mus=" + music
-                        + "&apikey=" + key);
+                    var json = wc.DownloadString($"https://api.vagalume.com.br/search.php?art={artist}&mus={music}&apikey={key}");
 
                     RootObject result = JsonConvert.DeserializeObject<RootObject>(json);
                     textBoxLetra.Text = result.mus[0].text.Replace("\n", Environment.NewLine);
