@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Spotics
@@ -36,27 +37,38 @@ namespace Spotics
             return proc.MainWindowTitle;
         }
 
-        private void ButtonCarregar_Click(object sender, EventArgs e)
+        private async void ButtonCarregar_Click(object sender, EventArgs e)
         {
-            string track = labelTocando.Text;
             try
             {
-                string artist = track.Split('-')[0];
-                string music = track.Split('-')[1];
-                string key = ""; // Sua key da API do Vagalume
-
-                using (var wc = new WebClient())
-                {
-                    var json = wc.DownloadString($"https://api.vagalume.com.br/search.php?art={artist}&mus={music}&apikey={key}");
-
-                    RootObject result = JsonConvert.DeserializeObject<RootObject>(json);
-                    textBoxLetra.Text = result.mus[0].text.Replace("\n", Environment.NewLine);
-                }
+                await DownloadDetails().ConfigureAwait(true);
             }
-            catch
+            catch (Exception err)
             {
                 textBoxLetra.Text = "Ocorreu algum erro! Música não reconhecida.";
             }
+        }
+
+        private async Task DownloadDetails()
+        {
+            string track = labelTocando.Text;
+            string artist = track.Split('-')[0];
+            string music = track.Split('-')[1];
+            string key = ""; // Sua key da API do Vagalume
+
+            using (var wc = new WebClient())
+            {
+                var uri = new Uri($"https://api.vagalume.com.br/search.php?art={artist}&mus={music}&apikey={key}");
+                wc.DownloadStringCompleted += wc_DownloadStringCompleted;
+                wc.DownloadStringAsync(uri);
+            }
+        }
+
+        private void wc_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+        {
+            var json = e.Result;
+            SongDetails result = JsonConvert.DeserializeObject<SongDetails>(json);
+            textBoxLetra.Text = result.mus[0].text.Replace("\n", Environment.NewLine);
         }
 
         private void ButtonMais_Click(object sender, EventArgs e)

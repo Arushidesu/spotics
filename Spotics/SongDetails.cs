@@ -1,6 +1,6 @@
 ﻿namespace Spotics
 {
-    internal class RootObject
+    internal class SongDetails
     {
         public string type { get; set; }
         public Art art { get; set; }
