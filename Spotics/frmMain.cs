@@ -12,12 +12,13 @@ namespace Spotics
     public partial class frmMain : Form
     {
         private readonly Timer _tmr = new Timer();
-
         private static string _currentSong = "";
+        private bool _darkMode = true;
 
         public frmMain()
         {
             InitializeComponent();
+
             _tmr.Interval = 5000;
             _tmr.Tick += AutoRefresh;
         }
@@ -125,6 +126,45 @@ namespace Spotics
                 _tmr.Stop();
                 _tmr.Enabled = false;
             }
+        }
+
+        private void S_Click(object sender, EventArgs e)
+        {
+            if (!_darkMode)
+            {
+                this.BackColor = SystemColors.Control;
+
+                foreach (Control child in this.Controls)
+                {
+                    child.ForeColor = Color.Black;
+                    textBoxLetra.BackColor = SystemColors.Control;
+                }
+
+                foreach (var button in this.Controls.OfType<Button>())
+                {
+                    button.BackColor = SystemColors.Control;
+                }
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(41, 41, 41);
+
+                foreach (Control child in this.Controls)
+                {
+                    child.ForeColor = Color.WhiteSmoke;
+                    textBoxLetra.BackColor = Color.FromArgb(41, 41, 41);
+                }
+
+                foreach (var button in this.Controls.OfType<Button>())
+                {
+                    button.BackColor = Color.FromArgb(100, 100, 100);
+                    button.FlatStyle = FlatStyle.Flat;
+                    button.FlatAppearance.BorderColor = Color.DarkGray;
+                }
+            }
+
+            btnChangeTheme.Text = _darkMode ? "White mode" : "Dark mode";
+            _darkMode = !_darkMode;
         }
     }
 }
